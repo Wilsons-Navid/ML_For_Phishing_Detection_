@@ -431,9 +431,8 @@ Contributions are welcome! Areas for improvement:
 
 For questions, suggestions, or collaboration:
 
-- **Email**: [Your Email]
-- **Institution**: [Your Institution]
-- **GitHub**: [Your GitHub]
+- **Email**: wadotiwawil@gmail.com
+- **Institution**: African Leadership University
 
 ---
 
