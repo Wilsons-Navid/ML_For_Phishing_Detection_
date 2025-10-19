@@ -4,7 +4,7 @@ A comprehensive comparative study of traditional machine learning and deep learn
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Dataset](#dataset)
@@ -21,7 +21,7 @@ A comprehensive comparative study of traditional machine learning and deep learn
 
 ---
 
-## 🔍 Overview
+## Overview
 
 This project implements and compares multiple machine learning and deep learning models for detecting phishing websites based on URL and webpage features. The study evaluates 5 distinct approaches:
 
@@ -35,12 +35,12 @@ The research emphasizes practical deployment considerations for resource-constra
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 ### Source
 **Phishing Websites Dataset**
 UCI Machine Learning Repository
-🔗 https://archive.ics.uci.edu/dataset/327/phishing+websites
+https://archive.ics.uci.edu/dataset/327/phishing+websites
 
 ### Description
 - **Total Samples**: 11,055 instances
@@ -63,7 +63,7 @@ All splits use stratified sampling to maintain class distribution.
 
 ---
 
-## 🤖 Models Implemented
+## Models Implemented
 
 ### 1. Logistic Regression
 - **Type**: Linear classifier
@@ -81,7 +81,7 @@ All splits use stratified sampling to maintain class distribution.
 - **Type**: Gradient boosting
 - **Configuration**: Tree-based boosting with regularization
 - **Advantages**: State-of-the-art performance, efficient training
-- **Test AUC**: 0.9963 ⭐
+- **Test AUC**: 0.9963
 
 ### 4. Sequential MLP
 - **Type**: Deep neural network
@@ -97,13 +97,13 @@ All splits use stratified sampling to maintain class distribution.
 
 ---
 
-## 📈 Results
+## Results
 
 ### Performance Summary
 
 | Model | Test AUC | Test Precision | Test Recall | Test F1 | Rank |
 |-------|----------|----------------|-------------|---------|------|
-| **XGBoost** | **0.9963** | 0.9648 | 0.9784 | 0.9715 | **1st** ⭐ |
+| **XGBoost** | **0.9963** | 0.9648 | 0.9784 | 0.9715 | **1st** |
 | Random Forest | 0.9955 | 0.9680 | 0.9827 | 0.9753 | 2nd |
 | Functional MLP | 0.9954 | 0.9616 | 0.9751 | 0.9683 | 3rd |
 | Sequential MLP | 0.9944 | 0.9633 | 0.9654 | 0.9643 | 4th |
@@ -121,44 +121,24 @@ All models demonstrate excellent generalization with negative validation-test ga
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
-final/
+ML_For_Phishing_Detection_/
 ├── phishing_ml_vs_dl_notebook_enhanced.ipynb   # Main Jupyter notebook
 ├── README.md                                    # This file
+├── requirements.txt                             # Python dependencies
 ├── experiment_results.csv                       # Model performance results
 ├── phishing.csv                                 # Full dataset
+├── Training Dataset.arff                        # Original ARFF format dataset
 ├── train_split.csv                              # Training data (60%)
 ├── val_split.csv                                # Validation data (20%)
-├── test_split.csv                               # Test data (20%)
-│
-├── Academic Report/
-│   ├── Phishing_Detection_Africa_Report_FINAL.docx    # Word format
-│   ├── Phishing_Detection_Africa_Report_FINAL.pdf     # PDF format
-│   └── Phishing_Detection_Africa_Report_CORRECTED.md  # Markdown source
-│
-├── Figures (Generated)/
-│   ├── report_table1_actual.png                 # Performance summary table
-│   ├── report_figure1_auc_actual.png            # AUC comparison chart
-│   ├── report_figure2_metrics_actual.png        # Multi-metric comparison
-│   └── report_figure3_generalization_actual.png # Generalization analysis
-│
-├── Figures (From Notebook)/
-│   ├── notebook_image_4_cell36.png              # ROC/PR curves (XGBoost)
-│   ├── notebook_image_5_cell36.png              # ROC/PR curves (MLP)
-│   ├── notebook_image_6_cell39.png              # Learning curves
-│   └── notebook_image_7_cell41.png              # Confusion matrices
-│
-└── Documentation/
-    ├── FINAL_REPORT_WITH_CURVES.md              # Report documentation
-    ├── REPORT_SUMMARY.md                        # Quick summary
-    └── README_Report_Guide.md                   # Report guide
+└── test_split.csv                               # Test data (20%)
 ```
 
 ---
 
-## 🛠️ Requirements
+## Requirements
 
 ### Python Version
 - Python 3.8+
@@ -196,12 +176,12 @@ markdown>=3.3.0
 
 ---
 
-## 💻 Installation
+## Installation
 
 ### 1. Clone the Repository
 ```bash
 git clone <repository-url>
-cd final
+cd ML_For_Phishing_Detection_
 ```
 
 ### 2. Create Virtual Environment (Recommended)
@@ -232,7 +212,7 @@ https://archive.ics.uci.edu/dataset/327/phishing+websites
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ### Running the Notebook
 
@@ -305,7 +285,7 @@ xgb_model.fit(X_train, y_train)
 
 ---
 
-## 🔑 Key Findings
+## Key Findings
 
 ### 1. Model Performance
 - **XGBoost achieves best overall performance** (0.9963 AUC)
@@ -346,30 +326,21 @@ Top contributing features:
 
 ---
 
-## 📄 Academic Report
+## Academic Report
 
-A comprehensive academic report (6,500+ words) is included documenting:
+A comprehensive academic report documenting the methodology, experimental results, and analysis is available in the main Jupyter notebook:
 
-- Literature review (21 scholarly sources)
-- Detailed methodology
-- Experimental results with 8 figures
+- Detailed methodology and implementation
+- Experimental results with visualizations
 - African deployment context analysis
-- Practical recommendations
+- Practical recommendations for different sectors
+- Performance comparison across all models
 
-**Files:**
-- `Phishing_Detection_Africa_Report_FINAL.docx` - Word format
-- `Phishing_Detection_Africa_Report_FINAL.pdf` - PDF format
-
-**Visualizations included:**
-- Performance comparison tables
-- ROC and Precision-Recall curves
-- Learning curves (loss and AUC over epochs)
-- Confusion matrices
-- Generalization analysis
+All analysis, figures, and results are contained within the `phishing_ml_vs_dl_notebook_enhanced.ipynb` notebook.
 
 ---
 
-## 🎓 Citation
+## Citation
 
 If you use this work, please cite:
 
@@ -398,7 +369,7 @@ If you use this work, please cite:
 
 ---
 
-## 📚 References
+## References
 
 Key references used in this study:
 
@@ -410,11 +381,9 @@ Key references used in this study:
 
 4. Sahingoz, O. K., Buber, E., Demir, O., & Diri, B. (2019). Machine learning based phishing detection from URLs. Expert Systems with Applications, 117, 345-357.
 
-Full bibliography available in the academic report.
-
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Areas for improvement:
 
@@ -427,7 +396,7 @@ Contributions are welcome! Areas for improvement:
 
 ---
 
-## 📧 Contact
+## Contact
 
 For questions, suggestions, or collaboration:
 
@@ -436,7 +405,7 @@ For questions, suggestions, or collaboration:
 
 ---
 
-## 🔒 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
@@ -445,7 +414,7 @@ The Phishing Websites Dataset is available from the UCI Machine Learning Reposit
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - UCI Machine Learning Repository for providing the phishing dataset
 - African cybersecurity research community for context and insights
@@ -454,7 +423,7 @@ The Phishing Websites Dataset is available from the UCI Machine Learning Reposit
 
 ---
 
-## 📊 Quick Stats
+## Quick Stats
 
 - **Models**: 5 different approaches
 - **Dataset Size**: 11,055 URLs
@@ -463,11 +432,10 @@ The Phishing Websites Dataset is available from the UCI Machine Learning Reposit
 - **Training Time**: 2-20 minutes (depending on model)
 - **Inference Speed**: <10 milliseconds per URL
 - **Code Quality**: Fully documented and reproducible
-- **Report**: 6,500+ words with 8 figures
 
 ---
 
-## 🎯 Future Work
+## Future Work
 
 1. **Dataset Expansion**
    - Collect Africa-specific phishing examples
@@ -495,10 +463,8 @@ The Phishing Websites Dataset is available from the UCI Machine Learning Reposit
 
 **Last Updated**: 2025-01-18
 **Version**: 1.0.0
-**Status**: Production Ready ✅
+**Status**: Production Ready
 
 ---
 
-For detailed methodology, results analysis, and African context discussion, please refer to the academic report included in this repository.
-
-**Happy Phishing Detection! 🛡️**
+For detailed methodology, results analysis, and African context discussion, please refer to the Jupyter notebook included in this repository.
